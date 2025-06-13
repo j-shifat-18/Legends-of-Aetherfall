@@ -1,8 +1,3 @@
-
-import Characters.Character;
-import Characters.DarkOverlord;
-import Characters.Mage;
-
 public class Main {
     public static void main(String[] args) {
         Character mage = new Mage("Elara");
