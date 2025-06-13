@@ -1,39 +1,35 @@
+public class Warrior extends Character {
 
-
-public class Mage extends Character {
-
-    public Mage(String name) {
-        super(name, 80, 100);
+    public Warrior(String name){
+        super(name, 120, 100);
     }
 
     @Override
     public void attack(Character opponent) {
-        int damage = 20;
-        int powerLoss = 10;
+        int damage = 12;
+        int powerLoss = 5;
 
-        if (this.power >= powerLoss && isAlive()) {
+        if(this.power >= powerLoss && isAlive()){
             opponent.takeDamage(damage);
             opponent.reducePower(powerLoss);
             System.out.println(this.name + " used Attack on " + opponent.name);
             System.out.println(this.name + " caused " + damage + " damage.");
-        } else {
-            System.out.println(this.name + " does not have enough power to attack!");
         }
+
     }
 
     @Override
     public void specialMove(Character opponent) {
-        int damage = 40;
-        int powerLoss = 30;
+        int damage = 35;
+        int powerLoss = 35;
 
-        if (this.power >= powerLoss) {
+        if(this.power >= powerLoss && isAlive()){
             opponent.takeDamage(damage);
             opponent.reducePower(powerLoss);
             System.out.println(this.name + " used Attack on " + opponent.name);
             System.out.println(this.name + " caused " + damage + " damage.");
-        } else {
-            System.out.println(this.name + " does not have enough power to attack!");
         }
 
     }
+    
 }

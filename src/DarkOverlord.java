@@ -1,5 +1,3 @@
-
-
 public class DarkOverlord extends Character {
     private boolean weakenNextAttack = false;
 
@@ -11,7 +9,7 @@ public class DarkOverlord extends Character {
     public void attack(Character opponent) {
         int damage = weakenNextAttack ? 12 : 25;
         int powerLoss = 17;
-        if (this.power >= powerLoss) {
+        if (this.power >= powerLoss && isAlive()) {
             opponent.takeDamage(damage);
             this.reducePower(powerLoss);
             System.out.println(this.name + " used Attack on " + opponent.name);
