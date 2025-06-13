@@ -11,7 +11,7 @@ public class Main {
         System.out.println("Choose a character: 1. Mage  2. Archer  3. Warrior");
         System.out.print("> ");
         int choice = scanner.nextInt();
-        scanner.nextLine(); 
+        scanner.nextLine();
 
         Character hero;
 
@@ -84,7 +84,21 @@ public class Main {
                     hero.attack(villain);
                     break;
                 case "special":
-                    hero.specialMove(villain);
+                    if (hero instanceof Archer) {
+                        System.out.println("Choose Archer Special Move: 1. quick  2. multi");
+                        System.out.print("> ");
+                        String specialChoice = scanner.nextLine().toLowerCase();
+
+                        if (specialChoice.equals("1") || specialChoice.equals("quick")) {
+                            ((Archer) hero).quickShot(villain);
+                        } else if (specialChoice.equals("2") || specialChoice.equals("multi")) {
+                            ((Archer) hero).multiShot(villain);
+                        } else {
+                            System.out.println("Invalid special move choice.");
+                        }
+                    } else {
+                        hero.specialMove(villain); // Mage, Warrior, etc.
+                    }
                     break;
                 default:
                     System.out.println("Invalid move. Type 'attack' or 'special'");

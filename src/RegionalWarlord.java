@@ -28,8 +28,8 @@ public class RegionalWarlord extends Character {
             opponent.takeDamage(damage);
             this.reducePower(powerLoss);
             stopAttackFor20Sec = true;
-            System.out.println(this.name + " used summonDarkness on " + opponent.name);
-            System.out.println(this.name + " caused " + damage + " damage and weakened next attack.");
+            System.out.println(this.name + " used toxicAura on " + opponent.name);
+            System.out.println(this.name + " caused " + damage + " damage and stoped Attack For 20 Second.");
         } else {
             System.out.println(this.name + " does not have enough power to use Special Move!");
         }
