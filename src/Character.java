@@ -9,6 +9,10 @@ public abstract class Character {
         this.power = power;
     }
 
+    public String getName(){
+        return name;
+    }
+
     public boolean isAlive() {
         return this.health > 0;
     };

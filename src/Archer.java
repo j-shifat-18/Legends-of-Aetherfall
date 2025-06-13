@@ -11,7 +11,7 @@ public class Archer extends Character {
 
         if(this.power >= powerLoss && isAlive()){
             opponent.takeDamage(damage);
-            opponent.reducePower(powerLoss);
+            this.reducePower(powerLoss);
             System.out.println(this.name + " used Attack on " + opponent.name);
             System.out.println(this.name + " caused " + damage + " damage.");
         }
@@ -25,7 +25,7 @@ public class Archer extends Character {
 
         if(this.power >= powerLoss && isAlive()){
             opponent.takeDamage(damage);
-            opponent.reducePower(powerLoss);
+            this.reducePower(powerLoss);
             System.out.println(this.name + " used Attack on " + opponent.name);
             System.out.println(this.name + " caused " + damage + " damage.");
         }

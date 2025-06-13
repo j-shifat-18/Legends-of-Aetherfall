@@ -11,9 +11,9 @@ public class Mage extends Character {
         int damage = 20;
         int powerLoss = 10;
 
-        if (this.power >= powerLoss && isAlive()) {
+        if (this.power >= powerLoss) {
             opponent.takeDamage(damage);
-            opponent.reducePower(powerLoss);
+            this.reducePower(powerLoss);
             System.out.println(this.name + " used Attack on " + opponent.name);
             System.out.println(this.name + " caused " + damage + " damage.");
         } else {
@@ -28,8 +28,8 @@ public class Mage extends Character {
 
         if (this.power >= powerLoss) {
             opponent.takeDamage(damage);
-            opponent.reducePower(powerLoss);
-            System.out.println(this.name + " used Attack on " + opponent.name);
+            this.reducePower(powerLoss);
+            System.out.println(this.name + " used special on " + opponent.name);
             System.out.println(this.name + " caused " + damage + " damage.");
         } else {
             System.out.println(this.name + " does not have enough power to attack!");
