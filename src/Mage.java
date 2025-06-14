@@ -2,8 +2,11 @@
 
 public class Mage extends Character {
 
+    private int manaRegenRate;
+
     public Mage(String name) {
         super(name, 80, 100);
+        this.manaRegenRate = 5; // Regain 5 power per turn
     }
 
     @Override
@@ -19,6 +22,8 @@ public class Mage extends Character {
         } else {
             System.out.println(this.name + " does not have enough power to attack!");
         }
+
+        this.power += manaRegenRate;
     }
 
     @Override
@@ -34,6 +39,8 @@ public class Mage extends Character {
         } else {
             System.out.println(this.name + " does not have enough power to attack!");
         }
+
+        this.power += manaRegenRate;
 
     }
 }

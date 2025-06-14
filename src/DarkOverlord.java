@@ -1,5 +1,5 @@
 public class DarkOverlord extends Character {
-    private boolean weakenNextAttack = false;
+    
 
     public DarkOverlord(String name) {
         super(name, 200, 150);
@@ -7,14 +7,15 @@ public class DarkOverlord extends Character {
 
     @Override
     public void attack(Character opponent) {
-        int damage = weakenNextAttack ? 12 : 25;
+        
+        int damage = 25;
         int powerLoss = 17;
         if (this.power >= powerLoss && isAlive()) {
             opponent.takeDamage(damage);
             this.reducePower(powerLoss);
             System.out.println(this.name + " used Attack on " + opponent.name);
             System.out.println(this.name + " caused " + damage + " damage.");
-            weakenNextAttack = false;
+           
         } else {
             System.out.println(this.name + " does not have enough power to attack!");
         }
@@ -27,7 +28,6 @@ public class DarkOverlord extends Character {
         if (this.power >= powerLoss) {
             opponent.takeDamage(damage);
             this.reducePower(powerLoss);
-            weakenNextAttack = true;
             System.out.println(this.name + " used summonDarkness on " + opponent.name);
             System.out.println(this.name + " caused " + damage + " damage and weakened next attack.");
         } else {

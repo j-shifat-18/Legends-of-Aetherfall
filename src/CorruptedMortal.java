@@ -1,8 +1,18 @@
-public class CorruptedMortal extends Character {
-    
+import java.util.Random;
 
+public class CorruptedMortal extends Character {
+
+    private String curseType;
+    
     public CorruptedMortal(String name) {
         super(name, 90, 90);
+        this.curseType = randomCurse(); 
+    }
+
+     private String randomCurse() {
+        String[] curses = {"Poison", "Burn", "Blind", "Fear"};
+        Random rand = new Random();
+        return curses[rand.nextInt(curses.length)];
     }
 
     @Override
@@ -32,5 +42,15 @@ public class CorruptedMortal extends Character {
         } else {
             System.out.println(this.name + " does not have enough power to use Special Move!");
         }
+    }
+
+     public String getCurseType() {
+        return curseType;
+    }
+
+    @Override
+    public void displayStats() {
+        super.displayStats();
+        System.out.println("Curse Type: " + curseType);
     }
 }
