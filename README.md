@@ -57,15 +57,13 @@ Welcome to **Aetherfall**, a console-based turn-based battle game written in Jav
 ```
 /Aetherfall-Game
 │
-├── Characters/
-│   ├── Character.java
-│   ├── Mage.java
-│   ├── Archer.java
-│   ├── Warrior.java
-│   ├── DarkOverlord.java
-│   ├── RegionalWarlord.java
-│   └── CorruptedMortal.java
-│
+├── Character.java
+├── Mage.java
+├── Archer.java
+├── Warrior.java
+├── DarkOverlord.java
+├── RegionalWarlord.java
+├── CorruptedMortal.java
 └── Main.java
 ```
 
