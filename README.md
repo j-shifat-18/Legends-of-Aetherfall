@@ -54,3 +54,67 @@ Welcome to **Aetherfall**, a console-based turn-based battle game written in Jav
 
 ## 📁 Project Structure
 
+```
+/Aetherfall-Game
+│
+├── Characters/
+│   ├── Character.java
+│   ├── Mage.java
+│   ├── Archer.java
+│   ├── Warrior.java
+│   ├── DarkOverlord.java
+│   ├── RegionalWarlord.java
+│   └── CorruptedMortal.java
+│
+└── Main.java
+```
+
+---
+
+## 🛠 How to Run
+
+1. Make sure you have **Java 8 or later** installed.
+2. Open your terminal and navigate to the project directory.
+3. Compile the code:
+
+```bash
+javac Characters/*.java Main.java
+```
+
+4. Run the game:
+
+```bash
+java Main
+```
+
+---
+
+## 🎓 OOP Concepts Used
+
+- **Abstract Classes**
+- **Inheritance & Method Overriding**
+- **Encapsulation (private attributes + getters/setters)**
+- **Polymorphism (Character references with child instances)**
+
+---
+
+## 📌 Controls
+
+- Type `attack` to perform a standard attack.
+- Type `special` to use your character's special move.
+- If you’re an Archer, choose between `quick` and `multi` shot.
+
+---
+
+## 📬 Author
+
+Made with ❤️ for Object Oriented Programming Lab  
+**Student:** MD Jahirul Islam Shifat  
+**University:** Islamic University of Technology  
+**Course:** SWE4202 - OOP Concepts I Lab
+
+---
+
+## 📝 License
+
+This project is for educational purposes only.
